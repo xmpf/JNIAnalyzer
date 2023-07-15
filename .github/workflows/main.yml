@@ -37,7 +37,6 @@ jobs:
 
       - name: 'Gradle Build'
         run: |
-          cd ./JNIAnalyzer
           gradle -PGHIDRA_INSTALL_DIR=/tmp/ghidra
 
       - name: Upload build artifacts
