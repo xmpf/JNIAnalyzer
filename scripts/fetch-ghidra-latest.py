@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 URL = 'https://github.com/NationalSecurityAgency/ghidra/releases/latest'
-GHIDRA_DEST = 'ghidra.zip'
+GHIDRA_DEST = '/tmp/ghidra.zip'
 
 def main():
     needle = 'expanded_assets'

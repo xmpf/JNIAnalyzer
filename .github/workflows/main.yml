@@ -33,14 +33,15 @@ jobs:
 
       - name: 'Extract Ghidra'
         run: |
-          7z x ghidra.zip -o/tmp/ghidra
+          7z x /tmp/ghidra.zip -o/tmp/ghidra
 
       - name: 'Gradle Build'
         run: |
-          gradle -PGHIDRA_INSTALL_DIR=/tmp/ghidra
+          cd JNIAnalyzer
+          gradle -PGHIDRA_INSTALL_DIR=$(find /tmp/ghidra/ -mindepth 1 -maxdepth 1 -type d)
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: /JNIAnalyzer/dist/
+          path: JNIAnalyzer/dist/
