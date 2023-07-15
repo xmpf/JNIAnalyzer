@@ -25,6 +25,7 @@ jobs:
           python-version: '3.10' 
           run: |
             pip install -U requests
+            pip install -U beautifulsoup4
 
       - name: 'Download latest Ghidra'
         run: |
