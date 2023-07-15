@@ -38,3 +38,9 @@ jobs:
       - name: 'Gradle Build'
         run: |
           gradle -PGHIDRA_INSTALL_DIR=./ghidra
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: ./dist/
