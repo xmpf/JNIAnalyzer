@@ -43,5 +43,4 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: JNIAnalyzer.zip
-          path: JNIAnalyzer/dist/
+          path: JNIAnalyzer/dist/*.zip
